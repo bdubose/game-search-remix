@@ -11,7 +11,7 @@ const getYear = (epoch: number) =>
 export const GameCard = ({ game }: GameCardProps) => {
     return (
         <div className="flex justify-center text-center flex-col rounded-xl w-80 m-8 bg-slate-400">
-            <h1>{game.name}</h1>
+            <h1 data-testid="game-card-name-header">{game.name}</h1>
             <div>{getYear(game.first_release_date)}</div>
             <Link to={`/game/${game.slug}`}>More...</Link>
         </div>

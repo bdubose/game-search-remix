@@ -9,7 +9,6 @@ export const loader = async ({ params }: LoaderFunctionArgs) => {
 
 export default function GamePage() {
     const game = useLoaderData<typeof loader>();
-    console.log(game);
     return (
         <div className="dark:text-white p-4">
             <h1 className="text-xl">{game.name}</h1>
